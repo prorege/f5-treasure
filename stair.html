@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수많은 계단을 올라와야 만날 수 있어요</title>
+  <style>
+    /* 배경 설정 */
+    body {
+      background: #e6f7ff; /* 하늘색 배경 */
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    /* 계단 스타일 */
+    .stairs {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .step {
+      width: 80px;
+      height: 30px;
+      background-color: #b3b3b3;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    /* 메시지 스타일 */
+    .message-box {
+      position: absolute;
+      bottom: 20px;
+      color: #4d4d4d;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      animation: moveUp 6s ease-in-out infinite;
+    }
+
+    /* 계단을 따라 올라가는 애니메이션 */
+    @keyframes moveUp {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-150px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="stairs">
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+  </div>
+
+  <div class="message-box">
+    저는 수많은 계단을 올라와야<br> 만날 수 있어요! 🏃‍♀️⛰️
+  </div>
+
+</body>
+</html>

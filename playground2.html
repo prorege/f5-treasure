@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미끄럼틀</title>
+  <style>
+    /* 배경 설정 */
+    body {
+      background: linear-gradient(135deg, #80c8ff, #ffcbf2); /* 시원한 파스텔 그라데이션 */
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    /* 미끄럼틀 스타일 */
+    .slide {
+      position: relative;
+      width: 200px;
+      height: 400px;
+      background-color: #ff6f61; /* 미끄럼틀 색상 */
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: slideEffect 3s ease-in-out infinite; /* 미끄럼틀 애니메이션 */
+    }
+
+    /* 미끄럼틀 애니메이션 */
+    @keyframes slideEffect {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+    }
+
+    /* 미끄럼틀 아래 부분 */
+    .slide-bottom {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 20px;
+      background-color: #ff3d34; /* 미끄럼틀 바닥 색상 */
+      border-radius: 50px;
+    }
+
+    /* 미끄럼틀에 붙어있는 사람 */
+    .person {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      width: 40px;
+      height: 80px;
+      background-color: #f9a825;
+      border-radius: 8px;
+      transform: translateX(-50%);
+    }
+
+    /* 텍스트 스타일 */
+    .message-box {
+      position: absolute;
+      bottom: -10px;
+      text-align: center;
+      color: #f2e8e7;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    /* 텍스트 애니메이션 */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="person"></div>
+    <div class="message-box">
+      🛝 저는<br>미끄럼틀에 붙어 있어요! 🚀
+    </div>
+    <div class="slide-bottom"></div>
+  </div>
+
+</body>
+</html>

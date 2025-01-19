@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>놀이터 그네</title>
+  <style>
+    /* 배경 설정 */
+    body {
+      background: linear-gradient(135deg, #fce7e5, #f3c9c9); /* 부드러운 핑크 그라데이션 */
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    /* 그네 스타일 */
+    .swing {
+      position: relative;
+      width: 100px;
+      height: 300px;
+      background-color: #f5a623; /* 그네 줄 색상 */
+      animation: swing 3s ease-in-out infinite; /* 그네 스윙 애니메이션 */
+    }
+
+    /* 그네 줄 */
+    .swing::before {
+      content: "";
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      width: 4px;
+      height: 200px;
+      background-color: #8b4513; /* 나무 색상 */
+      transform: translateX(-50%);
+    }
+
+    /* 그네에 앉은 사람 스타일 */
+    .swing-person {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 60px;
+      height: 120px;
+      background-color: #ff6f61;
+      border-radius: 10px;
+      transform: translateX(-50%);
+    }
+
+    /* 텍스트 스타일 */
+    .message-box {
+      position: absolute;
+      bottom: -30px;
+      text-align: center;
+      color: #cdc1c0;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    /* 그네 애니메이션 */
+    @keyframes swing {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(20deg);
+      }
+    }
+
+    /* 텍스트 애니메이션 */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="swing">
+    <div class="swing-person"></div>
+    <div class="message-box">
+      🎡 저는 놀이터<br> 그네에<br> 붙어 <br>있어요! 🪁
+    </div>
+  </div>
+
+</body>
+</html>

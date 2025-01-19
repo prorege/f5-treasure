@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>벤치 밑에 붙어있어요</title>
+  <style>
+    /* 배경 설정 */
+    body {
+      background: #d9f0f0; /* 교회 분위기의 연한 블루톤 배경 */
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    /* 벤치 스타일 */
+    .bench {
+      position: relative;
+      width: 300px;
+      height: 150px;
+      background-color: #8b4513; /* 나무 색상 */
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 벤치 다리 스타일 */
+    .bench-leg {
+      position: absolute;
+      bottom: -15px;
+      width: 20px;
+      height: 50px;
+      background-color: #6b3f2a; /* 다리 색상 */
+      border-radius: 5px;
+    }
+    .bench-leg.left {
+      left: 20px;
+    }
+    .bench-leg.right {
+      right: 20px;
+    }
+
+    /* 벤치 위에 있는 사람 (밑에 붙어 있는 느낌을 주기 위한 스타일) */
+    .person {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      width: 40px;
+      height: 80px;
+      background-color: #f9a825;
+      border-radius: 8px;
+      transform: translateX(-50%);
+      animation: stick 3s ease-in-out infinite; /* 밑에 붙어 있는 애니메이션 */
+    }
+
+    /* 애니메이션 - 벤치 밑에 붙어 있는 느낌 */
+    @keyframes stick {
+      0%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-10px); /* 살짝 튕겨 올라가는 효과 */
+      }
+    }
+
+    /* 메시지 스타일 */
+    .message-box {
+      position: absolute;
+      bottom: -50px;
+      color: #efedeb;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    /* 메시지 애니메이션 */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bench">
+    <div class="bench-leg left"></div>
+    <div class="bench-leg right"></div>
+    <div class="person"></div>
+    <div class="message-box">
+      ⛪ 교회 어딘가에 있는 벤치 밑에 붙어있어요! 🌿
+    </div>
+  </div>
+
+</body>
+</html>

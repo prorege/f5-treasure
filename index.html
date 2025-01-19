@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보물찾기 - 다른 곳을 찾아보세요</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style>
+        /* 전체 컨테이너 스타일 */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f1de; /* 크림색 배경 */
+            font-family: 'Luckiest Guy', cursive, sans-serif;
+        }
+
+        /* 보드 스타일 */
+        .board {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            padding: 2rem;
+            background: #f2cc8f; /* 빈티지 느낌의 밝은 노란색 */
+            border: 8px solid #3d348b; /* 진한 남색 테두리 */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* 메시지 박스 스타일 */
+        .message-box {
+            background: #81b29a; /* 밝은 녹색 */
+            border-radius: 10px;
+            padding: 1.5rem;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 메시지 제목 */
+        .message-box h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #3d348b; /* 진한 남색 */
+            text-shadow: 2px 2px #f2cc8f;
+        }
+
+        /* 메시지 텍스트 */
+        .message-box p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #f4f1de; /* 크림색으로 부드럽게 */
+        }
+
+        /* 데코레이션 별 */
+        .decoration {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .star {
+            font-size: 2rem;
+            color: #f2cc8f;
+            text-shadow: 2px 2px #3d348b;
+            margin: 0 10px;
+            animation: spin 3s infinite;
+        }
+
+        /* 별 스핀 애니메이션 */
+        @keyframes spin {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="board">
+            <div class="message-box">
+                <h1>🎯 :( 🎯</h1>
+                <p>아쉽네요! 다른 곳을 찾아보세요🎲</p>
+            </div>
+            <div class="decoration">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
