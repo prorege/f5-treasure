@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가장 낮은 곳에서</title>
+  <style>
+    /* 전체 배경 스타일 */
+    body {
+      background: linear-gradient(135deg, #3c3c3c, #1a1a1a); /* 어두운 그라데이션 */
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    /* 메시지 박스 스타일 */
+    .message-box {
+      background: #444444; /* 어두운 회색 배경 */
+      border: 3px solid #ffd700; /* 따뜻한 금색 테두리 */
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    /* 제목 스타일 */
+    .message-box h1 {
+      font-size: 2.5rem;
+      color: #ffd700; /* 금색 */
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.7);
+    }
+
+    /* 본문 텍스트 스타일 */
+    .message-box p {
+      font-size: 1.5rem;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    /* 이모티콘 애니메이션 */
+    .emoji {
+      font-size: 4rem;
+      animation: pulse 2s infinite;
+      display: inline-block;
+    }
+
+    /* 애니메이션 - 빛나는 효과 */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="message-box">
+    <h1>저는 교회에서 <br>가장 낮은 곳에 있어요</h1>
+    <p>나의 가장 낮은 마음~ 😊</p>
+    <span class="emoji">🙏</span>
+  </div>
+
+</body>
+</html>
